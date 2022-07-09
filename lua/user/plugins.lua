@@ -146,15 +146,6 @@ return packer.startup(function(use)
     -- Github link: https://github.com/lewis6991/gitsigns.nvim
     use { "lewis6991/gitsigns.nvim", commit = "4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
 
-    -- Git diff view
-    -- Github Links: https://github.com/sindrets/diffview.nvim
-    -- Single tabpage interface for easily cycling through diffs for all modified files for any git rev
-    use { 
-        "sindrets/diffview.nvim", 
-        requires = "nvim-lua/plenary.nvim", 
-        commit = "16c3985581ee65bccdfbebbe014b24a01adc7d1f"
-    }
- 
     ------------------------------------------------------------------------------------------
     -- Code management 
     ------------------------------------------------------------------------------------------
@@ -181,7 +172,7 @@ return packer.startup(function(use)
 
     -- Cmdline completions
     use { "hrsh7th/cmp-cmdline" , commit = ""}
-    
+
     -- Snippet completions
     use { "L3MON4D3/LuaSnip", commit = ""}
     use { "rafamadriz/friendly-snippets", commit = ""}
