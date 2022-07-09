@@ -100,6 +100,13 @@ return packer.startup(function(use)
     -- Github link: https://github.com/lewis6991/gitsigns.nvim
     use { "lewis6991/gitsigns.nvim", commit = "4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
 
+    -- Git diff view
+    use { 
+        "sindrets/diffview.nvim", 
+        requires = "nvim-lua/plenary.nvim", 
+        commit = "16c3985581ee65bccdfbebbe014b24a01adc7d1f"
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
     if PACKER_BOOTSTRAP then
