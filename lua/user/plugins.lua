@@ -47,6 +47,11 @@ return packer.startup(function(use)
     -- Github link: https://github.com/wbthomason/packer.nvim
     -- Have packer manage itself.
     use { "wbthomason/packer.nvim", commit = "e4c2afb37d31e99b399425e102c58b091fbc16be" }
+    
+    -- Lua library for nvim
+    -- Github link: https://github.com/nvim-lua/plenary.nvim
+    -- All the lua functions I don't want to write twice, so the description says.
+    use { "nvim-lua/plenary.nvim", commit = "46e8bb9d3a852e0a2678be2d48179db545a9a39a" }
 
     -- Onedarker colorscheme
     -- Github link: https://github.com/lunarvim/onedarker
@@ -66,11 +71,6 @@ return packer.startup(function(use)
         requires = { {"kyazdani42/nvim-web-devicons"} },
         commit = "411ce27d871f963256c0787bc4133cf945dd89d3"
     }
-
-    -- Lua library for nvim
-    -- Github link: https://github.com/nvim-lua/plenary.nvim
-    -- All the lua functions I don't want to write twice, so the description says.
-    use { "nvim-lua/plenary.nvim", commit = "46e8bb9d3a852e0a2678be2d48179db545a9a39a" }
 
     -- Telescope
     -- Github link: https://github.com/nvim-telescope/telescope.nvim
@@ -95,6 +95,10 @@ return packer.startup(function(use)
         },
         commit = "c037c7ae848873756926d0085ae3bb8df9a99e9e"
     }
+
+    -- Git signs
+    -- Github link: https://github.com/lewis6991/gitsigns.nvim
+    use { 'lewis6991/gitsigns.nvim', commit="4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.

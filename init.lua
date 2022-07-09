@@ -22,7 +22,10 @@ require "user.project"
 -- NVim tree explorer config
 require "user.nvim-tree"
 
+-- Configure git signs
+require "user.gitsigns"
+
 -- User's custom options.
--- Put this at the end of the configuration list.
+-- Put this at the end of the main configuration list.
 -- Settings that are put here should override all other settings.
 require "user.custom"
