@@ -19,6 +19,9 @@ require "user.keymaps"
 -- Set NVim colorscheme
 require "user.colorscheme"
 
+-- Set NVim colorscheme
+require "user.identline"
+
 
 ------------------------------------------------------------------------------------------
 -- Accesibility
@@ -47,6 +50,11 @@ require "user.project"
 -- Configure git signs
 require "user.gitsigns"
 
+
+------------------------------------------------------------------------------------------
+-- Code management
+------------------------------------------------------------------------------------------
+require "user.treesitter"
 
 ------------------------------------------------------------------------------------------
 -- User custom configs

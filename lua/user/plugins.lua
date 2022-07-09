@@ -84,6 +84,10 @@ return packer.startup(function(use)
     -- Onedark inspired colorscheme written in lua
     use { "lunarvim/onedarker", commit = "724aa3ab5efbdfe83ae0ea1ad9d44166b1685ba8" }
 
+    -- Identation guides for neovim
+    -- Github links: lukas-reineke/indent-blankline.nvim
+    use { "lukas-reineke/indent-blankline.nvim", commit = "4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" } 
+
 
     ------------------------------------------------------------------------------------------
     -- Accesibility
@@ -151,10 +155,15 @@ return packer.startup(function(use)
  
 
     ------------------------------------------------------------------------------------------
-    -- Code completion 
+    -- Code management 
     ------------------------------------------------------------------------------------------
 
-    -- ...
+    -- vim Treesitter configurations and abstraction layer
+    -- Github link: https://github.com/nvim-treesitter/nvim-treesitter/commits/master
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        commit = "2f340af1357b0bae96b70b8969669000c5e6fe46"
+    }
     
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
