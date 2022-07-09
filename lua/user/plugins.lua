@@ -44,19 +44,24 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
     -- Packer
-    -- Github link: https://github.com/wbthomason/packer.nvim.git
+    -- Github link: https://github.com/wbthomason/packer.nvim
     -- Have packer manage itself.
     use { "wbthomason/packer.nvim", commit = "e4c2afb37d31e99b399425e102c58b091fbc16be" }
 
     -- Colorscheme
-    -- Github link: https://github.com/lunarvim/onedarker.git
+    -- Github link: https://github.com/lunarvim/onedarker
     -- Onedark inspired colorscheme written in lua.
     use { "lunarvim/onedarker", commit = "724aa3ab5efbdfe83ae0ea1ad9d44166b1685ba8" }
     
     -- Web devicons
     -- Github link: https://github.com/kyazdani42/nvim-web-devicons
+    -- Adds file type icons to NVim plugins.
     use { "kyazdani42/nvim-web-devicons", commit = "2d02a56189e2bde11edd4712fea16f08a6656944" }
-
+    
+    -- Alpha
+    -- Github link: https://github.com/goolord/alpha-nvim
+    -- Alpha is a fast and fully customizable greeter for neovim.
+    use { "goolord/alpha-nvim", commit = "411ce27d871f963256c0787bc4133cf945dd89d3" }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
