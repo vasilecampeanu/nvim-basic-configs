@@ -1,7 +1,10 @@
+-- This file is used for plugin management
+-- Packer is used as a plugin manager
+
 -- Map vim.fn to fn.
 local fn = vim.fn
 
--- Automatically install packer.
+-- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system {
@@ -16,7 +19,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file.
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
     augroup packer_user_config
         autocmd!
@@ -24,7 +27,7 @@ vim.cmd [[
     augroup end
 ]]
 
--- Use a protected call so we don't error out on first use.
+-- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
     return
@@ -43,6 +46,11 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+
+    ------------------------------------------------------------------------------------------
+    -- IDE Dependencies
+    ------------------------------------------------------------------------------------------
+
     -- Packer
     -- Github link: https://github.com/wbthomason/packer.nvim
     -- Have packer manage itself.
@@ -50,24 +58,36 @@ return packer.startup(function(use)
     
     -- Lua library for nvim
     -- Github link: https://github.com/nvim-lua/plenary.nvim
-    -- All the lua functions I don't want to write twice, so the description says.
+    -- All the lua functions I don't want to write twice, so the description says
     use { "nvim-lua/plenary.nvim", commit = "46e8bb9d3a852e0a2678be2d48179db545a9a39a" }
 
+    -- Plugin used by other plugins in general
+    -- Github link:
     use { "nvim-lua/popup.nvim", commit ="" }
-
-    -- Onedarker colorscheme
-    -- Github link: https://github.com/lunarvim/onedarker
-    -- Onedark inspired colorscheme written in lua.
-    use { "lunarvim/onedarker", commit = "724aa3ab5efbdfe83ae0ea1ad9d44166b1685ba8" }
 
     -- Web devicons
     -- Github link: https://github.com/kyazdani42/nvim-web-devicons
-    -- Adds file type icons to NVim plugins.
+    -- Adds file type icons to NVim plugins
     use { "kyazdani42/nvim-web-devicons", commit = "2d02a56189e2bde11edd4712fea16f08a6656944" }
 
+
+    ------------------------------------------------------------------------------------------
+    -- GUI
+    ------------------------------------------------------------------------------------------
+
+    -- Onedarker colorscheme
+    -- Github link: https://github.com/lunarvim/onedarker
+    -- Onedark inspired colorscheme written in lua
+    use { "lunarvim/onedarker", commit = "724aa3ab5efbdfe83ae0ea1ad9d44166b1685ba8" }
+
+
+    ------------------------------------------------------------------------------------------
+    -- Accesibility
+    ------------------------------------------------------------------------------------------
+    
     -- Alpha
     -- Github link: https://github.com/goolord/alpha-nvim
-    -- Alpha is a fast and fully customizable greeter for neovim.
+    -- Alpha is a fast and fully customizable greeter for neovim
     use {
         "goolord/alpha-nvim",
         requires = { {"kyazdani42/nvim-web-devicons"} },
@@ -76,17 +96,12 @@ return packer.startup(function(use)
 
     -- Telescope
     -- Github link: https://github.com/nvim-telescope/telescope.nvim
-    -- Find, Filter, Preview, Pick. All lua, all the time.
+    -- Find, Filter, Preview, Pick. All lua, all the time
     use {
         "nvim-telescope/telescope.nvim",
         requires = { {"nvim-lua/plenary.nvim"} },
         commit = "524c4eb7fb1a9941460ab7c7c09a3bca9cebb7be"
     }
-
-    -- Project mangament with project.nvim
-    -- Github link: https://github.com/ahmedkhalf/project.nvim
-    -- Superior project management solution for neovim.
-    use { "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f"}
 
     -- Nvim tree explorer
     -- Github link: https://github.com/kyazdani42/nvim-tree.lua
@@ -98,24 +113,45 @@ return packer.startup(function(use)
         commit = "c037c7ae848873756926d0085ae3bb8df9a99e9e"
     }
 
+    -- Toggle term
+    -- Github link: https://github.com/akinsho/toggleterm.nvim
+    -- A neovim lua plugin to help easily manage multiple terminal windows
+    use {
+        "akinsho/toggleterm.nvim",
+        config = function() require("toggleterm").setup() end,
+        commit = "8cba5c20c9d8517af21ac9e2afd06ad7b2dbdece"
+    }
+
+    ------------------------------------------------------------------------------------------
+    -- Project management & Version control
+    ------------------------------------------------------------------------------------------
+    
+    -- Project.nvim
+    -- Github link: https://github.com/ahmedkhalf/project.nvim
+    -- Superior project management solution for neovim.
+    use { "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f"}
+    
     -- Git signs
     -- Github link: https://github.com/lewis6991/gitsigns.nvim
     use { "lewis6991/gitsigns.nvim", commit = "4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
 
     -- Git diff view
+    -- Github Links: https://github.com/sindrets/diffview.nvim
+    -- Single tabpage interface for easily cycling through diffs for all modified files for any git rev
     use { 
         "sindrets/diffview.nvim", 
         requires = "nvim-lua/plenary.nvim", 
         commit = "16c3985581ee65bccdfbebbe014b24a01adc7d1f"
     }
  
-    -- Toggle term
-    use {
-        "akinsho/toggleterm.nvim",
-        commit = "8cba5c20c9d8517af21ac9e2afd06ad7b2dbdece",
-        config = function() require("toggleterm").setup()
-    end}
-   
+
+
+    ------------------------------------------------------------------------------------------
+    -- Code completion 
+    ------------------------------------------------------------------------------------------
+
+    -- ...
+    
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
     if PACKER_BOOTSTRAP then
