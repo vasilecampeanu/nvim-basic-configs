@@ -52,6 +52,11 @@ return packer.startup(function(use)
     -- Github link: https://github.com/lunarvim/onedarker.git
     -- Onedark inspired colorscheme written in lua.
     use { "lunarvim/onedarker", commit = "724aa3ab5efbdfe83ae0ea1ad9d44166b1685ba8" }
+    
+    -- Web devicons
+    -- Github link: https://github.com/kyazdani42/nvim-web-devicons
+    use { "kyazdani42/nvim-web-devicons", commit = "2d02a56189e2bde11edd4712fea16f08a6656944" }
+
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
