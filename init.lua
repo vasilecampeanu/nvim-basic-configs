@@ -2,6 +2,7 @@
 require "user.plugins"
 
 -- NVim options
+require "user.options"
 
 -- Keymaps
 require "user.keywords"
