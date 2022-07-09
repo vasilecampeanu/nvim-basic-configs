@@ -53,6 +53,8 @@ return packer.startup(function(use)
     -- All the lua functions I don't want to write twice, so the description says.
     use { "nvim-lua/plenary.nvim", commit = "46e8bb9d3a852e0a2678be2d48179db545a9a39a" }
 
+    use { "nvim-lua/popup.nvim", commit ="" }
+
     -- Onedarker colorscheme
     -- Github link: https://github.com/lunarvim/onedarker
     -- Onedark inspired colorscheme written in lua.
@@ -106,7 +108,14 @@ return packer.startup(function(use)
         requires = "nvim-lua/plenary.nvim", 
         commit = "16c3985581ee65bccdfbebbe014b24a01adc7d1f"
     }
-
+ 
+    -- Toggle term
+    use {
+        "akinsho/toggleterm.nvim",
+        commit = "8cba5c20c9d8517af21ac9e2afd06ad7b2dbdece",
+        config = function() require("toggleterm").setup()
+    end}
+   
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
     if PACKER_BOOTSTRAP then

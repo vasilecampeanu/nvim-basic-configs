@@ -25,6 +25,9 @@ require "user.nvim-tree"
 -- Configure git signs
 require "user.gitsigns"
 
+-- Toggle term config file
+require "user.toggleterm"
+
 -- User's custom options.
 -- Put this at the end of the main configuration list.
 -- Settings that are put here should override all other settings.
