@@ -5,6 +5,9 @@
 -- User's plugin management
 require "user.plugins"
 
+-- Impatient
+require "user.impatient"
+
 -- NVim options
 require "user.options"
 

@@ -55,7 +55,12 @@ return packer.startup(function(use)
     -- Github link: https://github.com/wbthomason/packer.nvim
     -- Have packer manage itself.
     use { "wbthomason/packer.nvim", commit = "e4c2afb37d31e99b399425e102c58b091fbc16be" }
-    
+
+    -- Impatient
+    -- Github link: https://github.com/lewis6991/impatient.nvim
+    -- Improve startup time for Neovim
+    use { 'lewis6991/impatient.nvim', commit = "2aa872de40dbbebe8e2d3a0b8c5651b81fe8b235" }
+
     -- Lua library for nvim
     -- Github link: https://github.com/nvim-lua/plenary.nvim
     -- All the lua functions I don't want to write twice, so the description says
