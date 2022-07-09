@@ -79,7 +79,6 @@ return packer.startup(function(use)
     -- Github link: https://github.com/nvim-lua/popup.nvim
     use { "nvim-lua/popup.nvim", commit = "b7404d35d5d3548a82149238289fa71f7f6de4ac" }
 
-
     ------------------------------------------------------------------------------------------
     -- GUI
     ------------------------------------------------------------------------------------------
@@ -92,7 +91,6 @@ return packer.startup(function(use)
     -- Identation guides for neovim
     -- Github links: lukas-reineke/indent-blankline.nvim
     use { "lukas-reineke/indent-blankline.nvim", commit = "4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" } 
-
 
     ------------------------------------------------------------------------------------------
     -- Accesibility
@@ -135,7 +133,6 @@ return packer.startup(function(use)
         commit = "8cba5c20c9d8517af21ac9e2afd06ad7b2dbdece"
     }
 
-
     ------------------------------------------------------------------------------------------
     -- Project management & Version control
     ------------------------------------------------------------------------------------------
@@ -158,12 +155,28 @@ return packer.startup(function(use)
         commit = "16c3985581ee65bccdfbebbe014b24a01adc7d1f"
     }
  
-
     ------------------------------------------------------------------------------------------
     -- Code management 
     ------------------------------------------------------------------------------------------
 
-    -- vim Treesitter configurations and abstraction layer
+    -- The completion plugin
+    use "hrsh7th/nvim-cmp" 
+
+    -- Buffer completions
+    use "hrsh7th/cmp-buffer"
+
+    -- Path completions
+    use "hrsh7th/cmp-path"
+
+    -- Cmdline completions
+    use "hrsh7th/cmp-cmdline" 
+    
+    -- Snippet completions
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
+    use "saadparwaiz1/cmp_luasnip"
+
+    -- Treesitter configurations and abstraction layer
     -- Github link: https://github.com/nvim-treesitter/nvim-treesitter/commits/master
     use {
         "nvim-treesitter/nvim-treesitter",
