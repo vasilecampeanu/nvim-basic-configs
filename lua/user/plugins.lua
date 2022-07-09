@@ -6,6 +6,7 @@ local fn = vim.fn
 
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system {
         "git",
@@ -136,12 +137,12 @@ return packer.startup(function(use)
     ------------------------------------------------------------------------------------------
     -- Project management & Version control
     ------------------------------------------------------------------------------------------
-    
+
     -- Project.nvim
     -- Github link: https://github.com/ahmedkhalf/project.nvim
     -- Superior project management solution for neovim.
     use { "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f"}
-    
+
     -- Git signs
     -- Github link: https://github.com/lewis6991/gitsigns.nvim
     use { "lewis6991/gitsigns.nvim", commit = "4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
@@ -149,14 +150,14 @@ return packer.startup(function(use)
     ------------------------------------------------------------------------------------------
     -- Code management 
     ------------------------------------------------------------------------------------------
-    
+
     -- Treesitter configurations and abstraction layer
     -- Github link: https://github.com/nvim-treesitter/nvim-treesitter/commits/master
     use {
         "nvim-treesitter/nvim-treesitter",
         commit = "2f340af1357b0bae96b70b8969669000c5e6fe46"
     }
-    
+
     -- Comments
     use { "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" }
@@ -165,20 +166,30 @@ return packer.startup(function(use)
     use { "hrsh7th/nvim-cmp", commit = "" }
 
     -- Buffer completions
-    use { "hrsh7th/cmp-buffer", commit = ""}
+    use { "hrsh7th/cmp-buffer", commit = "" }
 
     -- Path completions
-    use { "hrsh7th/cmp-path", commit = ""}
+    use { "hrsh7th/cmp-path", commit = "" }
 
     -- Cmdline completions
-    use { "hrsh7th/cmp-cmdline" , commit = ""}
+    use { "hrsh7th/cmp-cmdline" , commit = "" }
 
     -- Snippet completions
-    use { "L3MON4D3/LuaSnip", commit = ""}
-    use { "rafamadriz/friendly-snippets", commit = ""}
-    use { "saadparwaiz1/cmp_luasnip", commit = ""}
+    use { "L3MON4D3/LuaSnip", commit = "" }
+    use { "rafamadriz/friendly-snippets", commit = "" }
+    use { "saadparwaiz1/cmp_luasnip", commit = "" }
 
-    
+    -- Language server protocol
+
+    -- Cmp lsp support
+    use { "hrsh7th/cmp-nvim-lsp", commit = "" }
+
+    -- Enable LSP
+    use { "neovim/nvim-lspconfig", commit = "" }
+
+    -- Simple to use language server installer
+    use { "williamboman/nvim-lsp-installer", commit = "" }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
     if PACKER_BOOTSTRAP then
