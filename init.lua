@@ -1,7 +1,12 @@
 -- User's plugin management
 require "user.plugins"
 
--- Set nvim colorscheme
+-- NVim options
+
+-- Keymaps
+require "user.keywords"
+
+-- Set NVim colorscheme
 require "user.colorscheme"
 
 -- Home page customization using alpha
