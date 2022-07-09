@@ -5,7 +5,7 @@ require "user.plugins"
 require "user.options"
 
 -- Keymaps
-require "user.keywords"
+require "user.keymaps"
 
 -- Set NVim colorscheme
 require "user.colorscheme"

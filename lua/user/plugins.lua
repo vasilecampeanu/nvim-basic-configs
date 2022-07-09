@@ -89,16 +89,16 @@ return packer.startup(function(use)
     -- Nvim tree explorer
     -- Github link: https://github.com/kyazdani42/nvim-tree.lua
     use {
-        'kyazdani42/nvim-tree.lua',
+        "kyazdani42/nvim-tree.lua",
         requires = {
-          'kyazdani42/nvim-web-devicons',
+            "kyazdani42/nvim-web-devicons",
         },
         commit = "c037c7ae848873756926d0085ae3bb8df9a99e9e"
     }
 
     -- Git signs
     -- Github link: https://github.com/lewis6991/gitsigns.nvim
-    use { 'lewis6991/gitsigns.nvim', commit="4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
+    use { "lewis6991/gitsigns.nvim", commit = "4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
