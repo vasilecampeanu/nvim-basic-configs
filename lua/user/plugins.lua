@@ -60,15 +60,19 @@ return packer.startup(function(use)
     -- Github link: https://github.com/nvim-lua/plenary.nvim
     -- All the lua functions I don't want to write twice, so the description says
     use { "nvim-lua/plenary.nvim", commit = "46e8bb9d3a852e0a2678be2d48179db545a9a39a" }
-
-    -- Plugin used by other plugins in general
-    -- Github link:
-    use { "nvim-lua/popup.nvim", commit ="" }
+    
+    -- Fix CursorHold Performance
+    -- Github link: https://github.com/antoinemadec/FixCursorHold.nvim
+    use { "antoinemadec/FixCursorHold.nvim", commit = "5aa5ff18da3cdc306bb724cf1a138533768c9f5e" }
 
     -- Web devicons
     -- Github link: https://github.com/kyazdani42/nvim-web-devicons
     -- Adds file type icons to NVim plugins
     use { "kyazdani42/nvim-web-devicons", commit = "2d02a56189e2bde11edd4712fea16f08a6656944" }
+
+    -- Plugin used as a dependency by other plugins
+    -- Github link: https://github.com/nvim-lua/popup.nvim
+    use { "nvim-lua/popup.nvim", commit = "b7404d35d5d3548a82149238289fa71f7f6de4ac" }
 
 
     ------------------------------------------------------------------------------------------
@@ -122,6 +126,7 @@ return packer.startup(function(use)
         commit = "8cba5c20c9d8517af21ac9e2afd06ad7b2dbdece"
     }
 
+
     ------------------------------------------------------------------------------------------
     -- Project management & Version control
     ------------------------------------------------------------------------------------------
@@ -144,7 +149,6 @@ return packer.startup(function(use)
         commit = "16c3985581ee65bccdfbebbe014b24a01adc7d1f"
     }
  
-
 
     ------------------------------------------------------------------------------------------
     -- Code completion 
