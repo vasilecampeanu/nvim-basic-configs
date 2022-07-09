@@ -86,6 +86,16 @@ return packer.startup(function(use)
     -- Superior project management solution for neovim.
     use { "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f"}
 
+    -- Nvim tree explorer
+    -- Github link: https://github.com/kyazdani42/nvim-tree.lua
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+          'kyazdani42/nvim-web-devicons',
+        },
+        commit = "c037c7ae848873756926d0085ae3bb8df9a99e9e"
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
     if PACKER_BOOTSTRAP then
