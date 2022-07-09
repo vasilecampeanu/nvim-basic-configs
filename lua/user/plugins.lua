@@ -44,11 +44,17 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
     -- Packer
-    -- Have packer manage itself
-    use "wbthomason/packer.nvim"
+    -- Github link: https://github.com/wbthomason/packer.nvim.git
+    -- Have packer manage itself.
+    use { "wbthomason/packer.nvim", commit = "e4c2afb37d31e99b399425e102c58b091fbc16be" }
+
+    -- Colorscheme
+    -- Github link: https://github.com/lunarvim/onedarker.git
+    -- Onedark inspired colorscheme written in lua.
+    use { "lunarvim/onedarker", commit = "724aa3ab5efbdfe83ae0ea1ad9d44166b1685ba8" }
 
     -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
+    -- Put this at the end after all plugins.
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

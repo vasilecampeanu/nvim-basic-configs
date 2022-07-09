@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  onedarker = {
+    loaded = true,
+    path = "/Users/vasilecampeanu/.local/share/nvim/site/pack/packer/start/onedarker",
+    url = "https://github.com/lunarvim/onedarker"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/vasilecampeanu/.local/share/nvim/site/pack/packer/start/packer.nvim",
