@@ -54,11 +54,12 @@ require "user.gitsigns"
 -- Code management
 ------------------------------------------------------------------------------------------
 require "user.treesitter"
+require "user.comment"
+require "user.cmp"
 
 ------------------------------------------------------------------------------------------
 -- User custom configs
 ------------------------------------------------------------------------------------------
-require "user.cmp"
 
 -- Put this at the end of the main configuration list.
 require "user.custom"

@@ -158,30 +158,35 @@ return packer.startup(function(use)
     ------------------------------------------------------------------------------------------
     -- Code management 
     ------------------------------------------------------------------------------------------
-
-    -- The completion plugin
-    use "hrsh7th/nvim-cmp" 
-
-    -- Buffer completions
-    use "hrsh7th/cmp-buffer"
-
-    -- Path completions
-    use "hrsh7th/cmp-path"
-
-    -- Cmdline completions
-    use "hrsh7th/cmp-cmdline" 
     
-    -- Snippet completions
-    use "L3MON4D3/LuaSnip"
-    use "rafamadriz/friendly-snippets"
-    use "saadparwaiz1/cmp_luasnip"
-
     -- Treesitter configurations and abstraction layer
     -- Github link: https://github.com/nvim-treesitter/nvim-treesitter/commits/master
     use {
         "nvim-treesitter/nvim-treesitter",
         commit = "2f340af1357b0bae96b70b8969669000c5e6fe46"
     }
+    
+    -- Comments
+    use { "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" }
+    use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" }
+
+    -- The completion plugin
+    use { "hrsh7th/nvim-cmp", commit = "" }
+
+    -- Buffer completions
+    use { "hrsh7th/cmp-buffer", commit = ""}
+
+    -- Path completions
+    use { "hrsh7th/cmp-path", commit = ""}
+
+    -- Cmdline completions
+    use { "hrsh7th/cmp-cmdline" , commit = ""}
+    
+    -- Snippet completions
+    use { "L3MON4D3/LuaSnip", commit = ""}
+    use { "rafamadriz/friendly-snippets", commit = ""}
+    use { "saadparwaiz1/cmp_luasnip", commit = ""}
+
     
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
