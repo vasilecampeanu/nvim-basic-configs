@@ -57,28 +57,15 @@ return packer.startup(function(use)
     -- Have packer manage itself.
     use { "wbthomason/packer.nvim", commit = "e4c2afb37d31e99b399425e102c58b091fbc16be" }
 
-    -- Impatient
-    -- Github link: https://github.com/lewis6991/impatient.nvim
-    -- Improve startup time for Neovim
-    use { 'lewis6991/impatient.nvim', commit = "2aa872de40dbbebe8e2d3a0b8c5651b81fe8b235" }
-
     -- Lua library for nvim
     -- Github link: https://github.com/nvim-lua/plenary.nvim
     -- All the lua functions I don't want to write twice, so the description says
     use { "nvim-lua/plenary.nvim", commit = "46e8bb9d3a852e0a2678be2d48179db545a9a39a" }
     
-    -- Fix CursorHold Performance
-    -- Github link: https://github.com/antoinemadec/FixCursorHold.nvim
-    use { "antoinemadec/FixCursorHold.nvim", commit = "5aa5ff18da3cdc306bb724cf1a138533768c9f5e" }
-
     -- Web devicons
     -- Github link: https://github.com/kyazdani42/nvim-web-devicons
     -- Adds file type icons to NVim plugins
     use { "kyazdani42/nvim-web-devicons", commit = "2d02a56189e2bde11edd4712fea16f08a6656944" }
-
-    -- Plugin used as a dependency by other plugins
-    -- Github link: https://github.com/nvim-lua/popup.nvim
-    use { "nvim-lua/popup.nvim", commit = "b7404d35d5d3548a82149238289fa71f7f6de4ac" }
 
     ------------------------------------------------------------------------------------------
     -- GUI
@@ -88,10 +75,6 @@ return packer.startup(function(use)
     -- Github link: https://github.com/lunarvim/onedarker
     -- Onedark inspired colorscheme written in lua
     use { "lunarvim/onedarker", commit = "724aa3ab5efbdfe83ae0ea1ad9d44166b1685ba8" }
-
-    -- Identation guides for neovim
-    -- Github links: lukas-reineke/indent-blankline.nvim
-    use { "lukas-reineke/indent-blankline.nvim", commit = "4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" } 
 
     ------------------------------------------------------------------------------------------
     -- Accesibility
@@ -158,9 +141,13 @@ return packer.startup(function(use)
         commit = "2f340af1357b0bae96b70b8969669000c5e6fe46"
     }
 
-    -- Comments
+    -- Intelligent comments
     use { "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" }
+
+    -- Identation guides for neovim
+    -- Github links: lukas-reineke/indent-blankline.nvim
+    use { "lukas-reineke/indent-blankline.nvim", commit = "4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" } 
 
     -- The completion plugin
     use { "hrsh7th/nvim-cmp", commit = "" }
