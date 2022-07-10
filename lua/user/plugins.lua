@@ -138,7 +138,7 @@ return packer.startup(function(use)
 
     -- nvim-treesitter
     -- Treesitter configurations and abstraction layer
-    -- Github link: https://github.com/nvim-treesitter/nvim-treesitter/commits/master
+    -- Github link: https://github.com/nvim-treesitter/nvim-treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
         commit = "6f1bf2feec45ff7c9d7844602fe175907b7db633"
@@ -146,16 +146,16 @@ return packer.startup(function(use)
 
     -- Comment.nvim
     -- Intelligent comments
-    -- Github links:
+    -- Github links: https://github.com/numToStr/Comment.nvim
     use { "numToStr/Comment.nvim", commit = "4086630ce2aaf76b2652516ee3169f0b558f6be1" }
     
     -- nvim-ts-context-commentstring
-    -- Github links:
+    -- Github links: https://github.com/JoosepAlviste/nvim-ts-context-commentstring
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" }
 
     -- indent-blankline.nvim
     -- Identation guides for neovim
-    -- Github links: lukas-reineke/indent-blankline.nvim
+    -- Github links: https://github.com/lukas-reineke/indent-blankline.nvim
     use { "lukas-reineke/indent-blankline.nvim", commit = "4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" } 
 
     ---------------------------------------------------------------------------
@@ -164,7 +164,7 @@ return packer.startup(function(use)
 
     -- nvim-cmp
     -- The completion plugin
-    -- Github link:
+    -- Github link: https://github.com/hrsh7th/nvim-cmp
     use { "hrsh7th/nvim-cmp", commit = "9897465a7663997b7b42372164ffc3635321a2fe" }
 
     -- cmp-nvim-lua
@@ -174,12 +174,12 @@ return packer.startup(function(use)
 
     -- cmp-buffer
     -- Buffer completions
-    -- Github link:
+    -- Github link: https://github.com/hrsh7th/cmp-buffer
     use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
 
     -- cmp-path
     -- Path completions
-    -- Github link:
+    -- Github link: https://github.com/hrsh7th/cmp-path
     use { "hrsh7th/cmp-path", commit = "981baf9525257ac3269e1b6701e376d6fbff6921" }
 
     -- nvim-autopairs
@@ -193,15 +193,15 @@ return packer.startup(function(use)
 
     -- LuaSnip
     -- Snippet completions engine
-    -- Github link:
+    -- Github link: https://github.com/L3MON4D3/LuaSnip
     use { "L3MON4D3/LuaSnip", commit = "7d78278c2a935b8cd1b6b43065223e14490f3133" }
     
     -- friendly-snippets
-    -- Github link:
+    -- Github link: https://github.com/rafamadriz/friendly-snippets
     use { "rafamadriz/friendly-snippets", commit = "24afb4c178d8ea28bfa73f37814ada43be478b1d" }
     
     -- cmp_luasnip
-    -- Github link:
+    -- Github link: https://github.com/saadparwaiz1/cmp_luasnip
     use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }
 
     ---------------------------------------------------------------------------
@@ -210,12 +210,12 @@ return packer.startup(function(use)
 
     -- nvim-lspconfig
     -- Enable LSP
-    -- Github link:
+    -- Github link: https://github.com/neovim/nvim-lspconfig
     use { "neovim/nvim-lspconfig", commit = "41a826947eefbc7b59cc80cef405cce9ea6d82b8" }
 
     -- nvim-lsp-installer
     -- Simple to use language server installer
-    -- Github link:
+    -- Github link: https://github.com/williamboman/nvim-lsp-installer
     use { "williamboman/nvim-lsp-installer", commit = "33700e2de88699caa064e94e9642f244b26ac014" }
 
     -- null-ls
