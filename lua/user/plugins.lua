@@ -174,11 +174,14 @@ return packer.startup(function(use)
     -- Cmdline completions
     use { "hrsh7th/cmp-cmdline" , commit = "" }
 
+    -- Get autopairs completion working
+    use { "windwp/nvim-autopairs", commit = "" }
+    
     -- Snippet completions
     use { "L3MON4D3/LuaSnip", commit = "" }
     use { "rafamadriz/friendly-snippets", commit = "" }
     use { "saadparwaiz1/cmp_luasnip", commit = "" }
-
+   
     -- Language server protocol
 
     -- Cmp lsp support

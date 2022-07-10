@@ -56,6 +56,7 @@ require "user.gitsigns"
 require "user.treesitter"
 require "user.comment"
 require "user.cmp"
+require "user.autopairs"
 require "user.lsp"
 
 ------------------------------------------------------------------------------------------
