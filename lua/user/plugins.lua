@@ -60,7 +60,7 @@ return packer.startup(function(use)
     -- Lua library for nvim
     -- All the lua functions I don't want to write twice, so the description says
     -- Github link: https://github.com/nvim-lua/plenary.nvim
-    use { "nvim-lua/plenary.nvim", commit = "46e8bb9d3a852e0a2678be2d48179db545a9a39a" }
+    use { "nvim-lua/plenary.nvim", commit = "986ad71ae930c7d96e812734540511b4ca838aa2" }
     
     -- Web devicons
     -- Adds file type icons to NVim plugins
@@ -95,7 +95,7 @@ return packer.startup(function(use)
     use {
         "nvim-telescope/telescope.nvim",
         requires = { {"nvim-lua/plenary.nvim"} },
-        commit = "524c4eb7fb1a9941460ab7c7c09a3bca9cebb7be"
+        commit = "10a3310546284faae4ada397a61d68e0a8d0d9f7"
     }
 
     -- Nvim tree explorer
@@ -105,7 +105,7 @@ return packer.startup(function(use)
         requires = {
             "kyazdani42/nvim-web-devicons",
         },
-        commit = "c037c7ae848873756926d0085ae3bb8df9a99e9e"
+        commit = "ad1f3ef3bc86ca43ebf488569aadf6f56e448575"
     }
 
     -- toggleterm.nvim
@@ -114,7 +114,7 @@ return packer.startup(function(use)
     use {
         "akinsho/toggleterm.nvim",
         config = function() require("toggleterm").setup() end,
-        commit = "8cba5c20c9d8517af21ac9e2afd06ad7b2dbdece"
+        commit = "1a8b330d3da8b5ee3d726cdc1797ac83ef84b695"
     }
 
     ------------------------------------------------------------------------------------------
@@ -141,13 +141,13 @@ return packer.startup(function(use)
     -- Github link: https://github.com/nvim-treesitter/nvim-treesitter/commits/master
     use {
         "nvim-treesitter/nvim-treesitter",
-        commit = "2f340af1357b0bae96b70b8969669000c5e6fe46"
+        commit = "6f1bf2feec45ff7c9d7844602fe175907b7db633"
     }
 
     -- Comment.nvim
     -- Intelligent comments
     -- Github links:
-    use { "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" }
+    use { "numToStr/Comment.nvim", commit = "4086630ce2aaf76b2652516ee3169f0b558f6be1" }
     
     -- nvim-ts-context-commentstring
     -- Github links:
@@ -165,27 +165,27 @@ return packer.startup(function(use)
     -- nvim-cmp
     -- The completion plugin
     -- Github link:
-    use { "hrsh7th/nvim-cmp", commit = "" }
+    use { "hrsh7th/nvim-cmp", commit = "9897465a7663997b7b42372164ffc3635321a2fe" }
 
     -- cmp-nvim-lua
     -- This source will complete neovim's Lua runtime API such vim.lsp.*.
     -- Github link: https://github.com/hrsh7th/cmp-nvim-lua
-    use { "hrsh7th/cmp-nvim-lua", commit = "" }
+    use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
     -- cmp-buffer
     -- Buffer completions
     -- Github link:
-    use { "hrsh7th/cmp-buffer", commit = "" }
+    use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
 
     -- cmp-path
     -- Path completions
     -- Github link:
-    use { "hrsh7th/cmp-path", commit = "" }
+    use { "hrsh7th/cmp-path", commit = "981baf9525257ac3269e1b6701e376d6fbff6921" }
 
     -- nvim-autopairs
     -- Get autopairs completion working
     -- Github link: https://github.com/windwp/nvim-autopairs
-    use { "windwp/nvim-autopairs", commit = "" }
+    use { "windwp/nvim-autopairs", commit = "972a7977e759733dd6721af7bcda7a67e40c010e" }
     
     ---------------------------------------------------------------------------
 
@@ -194,15 +194,15 @@ return packer.startup(function(use)
     -- LuaSnip
     -- Snippet completions engine
     -- Github link:
-    use { "L3MON4D3/LuaSnip", commit = "" }
+    use { "L3MON4D3/LuaSnip", commit = "7d78278c2a935b8cd1b6b43065223e14490f3133" }
     
     -- friendly-snippets
     -- Github link:
-    use { "rafamadriz/friendly-snippets", commit = "" }
+    use { "rafamadriz/friendly-snippets", commit = "24afb4c178d8ea28bfa73f37814ada43be478b1d" }
     
     -- cmp_luasnip
     -- Github link:
-    use { "saadparwaiz1/cmp_luasnip", commit = "" }
+    use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }
 
     ---------------------------------------------------------------------------
     
@@ -211,22 +211,22 @@ return packer.startup(function(use)
     -- nvim-lspconfig
     -- Enable LSP
     -- Github link:
-    use { "neovim/nvim-lspconfig", commit = "" }
+    use { "neovim/nvim-lspconfig", commit = "41a826947eefbc7b59cc80cef405cce9ea6d82b8" }
 
     -- nvim-lsp-installer
     -- Simple to use language server installer
     -- Github link:
-    use { "williamboman/nvim-lsp-installer", commit = "" }
+    use { "williamboman/nvim-lsp-installer", commit = "33700e2de88699caa064e94e9642f244b26ac014" }
 
     -- null-ls
     -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
     -- Github link: https://github.com/jose-elias-alvarez/null-ls.nvim
-    use { "jose-elias-alvarez/null-ls.nvim", commit = ""}
+    use { "jose-elias-alvarez/null-ls.nvim", commit = "fbb1929b29beff82e0fc495670f00ef4b3bcbcd3"}
 
     -- cmp-nvim-lsp
     -- nvim-cmp source for neovim's built-in language server client.
     -- Github link: https://github.com/hrsh7th/cmp-nvim-lsp
-    use { "hrsh7th/cmp-nvim-lsp", commit = "" }
+    use { "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins.
