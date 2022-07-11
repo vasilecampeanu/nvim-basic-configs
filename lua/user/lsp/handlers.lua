@@ -12,11 +12,10 @@ M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
 
 M.setup = function()
     local signs = {
-
         { name = "DiagnosticSignError", text = "" },
-        { name = "DiagnosticSignWarn", text = "" },
-        { name = "DiagnosticSignHint", text = "" },
-        { name = "DiagnosticSignInfo", text = "" },
+        { name = "DiagnosticSignWarn",  text = "" },
+        { name = "DiagnosticSignHint",  text = "" },
+        { name = "DiagnosticSignInfo",  text = "" },
     }
 
     for _, sign in ipairs(signs) do
@@ -24,9 +23,9 @@ M.setup = function()
     end
 
     local config = {
-        virtual_text = false, -- disable virtual text
+        virtual_text = false,
         signs = {
-            active = signs, -- show signs
+            active = signs,
         },
         update_in_insert = true,
         underline = true,
@@ -82,10 +81,13 @@ M.on_attach = function(client, bufnr)
     end
 
     lsp_keymaps(bufnr)
+    
     local status_ok, illuminate = pcall(require, "illuminate")
+    
     if not status_ok then
         return
     end
+    
     illuminate.on_attach(client)
 end
 

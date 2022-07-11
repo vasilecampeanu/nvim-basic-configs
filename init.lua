@@ -3,62 +3,59 @@
 ------------------------------------------------------------------------------------------
 
 -- User's plugin management
-require "user.plugins"
+require("user.plugins")
 
 -- NVim options
-require "user.options"
+require("user.options")
 
 -- Keymaps
-require "user.keymaps"
+require("user.keymaps")
 
 ------------------------------------------------------------------------------------------
 -- GUI
 ------------------------------------------------------------------------------------------
 
 -- Set NVim colorscheme
-require "user.colorscheme"
-
--- Set NVim colorscheme
-require "user.identline"
+require("user.colorscheme")
 
 ------------------------------------------------------------------------------------------
 -- Accesibility
 ------------------------------------------------------------------------------------------
 
 -- Home page customization using alpha
-require "user.alpha"
+require("user.alpha")
 
 -- File finder and explorer
-require "user.telescope"
+require("user.telescope")
 
 -- NVim tree explorer config
-require "user.nvim-tree"
+require("user.nvim-tree")
 
 -- Toggle term config file
-require "user.toggleterm"
+require("user.toggleterm")
 
 ------------------------------------------------------------------------------------------
 -- Project management & Version control
 ------------------------------------------------------------------------------------------
 
 -- Project manager configuration
-require "user.project"
+require("user.project")
 
 -- Configure git signs
-require "user.gitsigns"
+require("user.gitsigns")
 
 ------------------------------------------------------------------------------------------
 -- Code management
 ------------------------------------------------------------------------------------------
-require "user.treesitter"
-require "user.comment"
-require "user.cmp"
-require "user.autopairs"
-require "user.lsp"
+require("user.treesitter")
+require("user.comment")
+require("user.cmp")
+require("user.autopairs")
+require("user.lsp")
 
 ------------------------------------------------------------------------------------------
 -- User custom configs
 ------------------------------------------------------------------------------------------
 
 -- Put this at the end of the main configuration list.
-require "user.custom"
+require("user.custom")

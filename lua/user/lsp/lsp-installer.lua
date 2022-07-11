@@ -4,7 +4,7 @@ if not status_ok then
     return
 end
 
-local servers = { "pyright" }
+local servers = { "sumneko_lua", "pyright", "tsserver" }
 
 lsp_installer.setup()
 

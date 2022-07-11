@@ -6,6 +6,7 @@ end
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
+local completion = null_ls.builtins.completion
 
 null_ls.setup {
     debug = false,
@@ -16,7 +17,8 @@ null_ls.setup {
         },
         formatting.black.with { extra_args = { "--fast" } },
         formatting.stylua,
-        formatting.google_java_format,
-        diagnostics.flake8,
+        formatting.prettier,
+        diagnostics.eslint,
+        completion.spell
     },
 }

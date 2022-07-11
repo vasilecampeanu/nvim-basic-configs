@@ -113,7 +113,6 @@ return packer.startup(function(use)
     -- Github link: https://github.com/akinsho/toggleterm.nvim
     use {
         "akinsho/toggleterm.nvim",
-        config = function() require("toggleterm").setup() end,
         commit = "1a8b330d3da8b5ee3d726cdc1797ac83ef84b695"
     }
 
@@ -134,7 +133,7 @@ return packer.startup(function(use)
     -- Code management 
     ------------------------------------------------------------------------------------------
 
-    -- Code style
+    -- Core
 
     -- nvim-treesitter
     -- Treesitter configurations and abstraction layer
@@ -153,10 +152,9 @@ return packer.startup(function(use)
     -- Github links: https://github.com/JoosepAlviste/nvim-ts-context-commentstring
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" }
 
-    -- indent-blankline.nvim
-    -- Identation guides for neovim
-    -- Github links: https://github.com/lukas-reineke/indent-blankline.nvim
-    use { "lukas-reineke/indent-blankline.nvim", commit = "4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" } 
+    -- vim-illuminate
+    -- Github link: https://github.com/RRethy/vim-illuminate.git
+    use { "RRethy/vim-illuminate", commit = "6bfa5dc069bd4aa8513a3640d0b73392094749be" } 
 
     ---------------------------------------------------------------------------
 
