@@ -102,9 +102,7 @@ return packer.startup(function(use)
     -- Github link: https://github.com/kyazdani42/nvim-tree.lua
     use {
         "kyazdani42/nvim-tree.lua",
-        requires = {
-            "kyazdani42/nvim-web-devicons",
-        },
+        requires = { "kyazdani42/nvim-web-devicons" },
         commit = "ad1f3ef3bc86ca43ebf488569aadf6f56e448575"
     }
 
@@ -140,7 +138,8 @@ return packer.startup(function(use)
     -- Github link: https://github.com/nvim-treesitter/nvim-treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
-        commit = "6f1bf2feec45ff7c9d7844602fe175907b7db633"
+        commit = "6f1bf2feec45ff7c9d7844602fe175907b7db633",
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end
     }
 
     -- Comment.nvim

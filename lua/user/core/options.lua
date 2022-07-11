@@ -1,4 +1,8 @@
--- Option table
+-- NVim API
+local opt = vim.opt
+opt.shortmess:append "c"
+
+-- Default option table
 local options = {
     backup = false,                          -- creates a backup file
     clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
@@ -11,6 +15,7 @@ local options = {
     guifont = "monospace:h17",               -- the font used in graphical neovim applications
     hlsearch = true,                         -- highlight all matches on previous search pattern
     ignorecase = true,                       -- ignore case in search patterns
+    mouse = "a",                             -- allow the mouse to be used in neovim
     number = true,                           -- set numbered lines
     numberwidth = 4,                         -- set number column width to 4 {default 4}
     pumheight = 10,                          -- pop up menu height
@@ -26,7 +31,7 @@ local options = {
     splitbelow = true,                       -- force all horizontal splits to go below current window
     splitright = true,                       -- force all vertical splits to go to the right of current window
     swapfile = false,                        -- creates a swapfile
-    tabstop = 4,                             -- insert 2 spaces for a tab
+    tabstop = 4,                             -- insert 4 spaces for a tab
     termguicolors = true,                    -- set term gui colors (most terminals support this)
     timeoutlen = 500,                        -- time to wait for a mapped sequence to complete (in milliseconds)
     undofile = true,                         -- enable persistent undo
@@ -35,12 +40,6 @@ local options = {
     writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 }
 
-vim.opt.shortmess:append "c"
-
 for k, v in pairs(options) do
-    vim.opt[k] = v
+    opt[k] = v
 end
-
--- Options using vim style
-vim.cmd [[set guicursor=i:block]]
-vim.cmd [[set guicursor=a:blinkon1]]
