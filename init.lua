@@ -39,8 +39,10 @@ require("user.gitsigns")
 ------------------------------------------------------------------------------------------
 -- Code management
 ------------------------------------------------------------------------------------------
+
 require("user.treesitter")
 require("user.comment")
 require("user.cmp")
 require("user.autopairs")
-require("user.lsp")
+
+require("user.plugins")
